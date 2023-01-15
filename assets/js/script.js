@@ -31,7 +31,7 @@ const actualizarLista = () => {
     let html = ""
     let contarTareasListas = 0
     for (let tarea of listaTareas) {
-        if (tarea.status) {
+        if (tarea.estado) {
             contarTareasListas++
         }
         html += `
@@ -55,7 +55,7 @@ const actualizarLista = () => {
 const actualizarEstado = (tareaId) => {
     const index = listaTareas.findIndex(tarea => tarea.id === tareaId)
     if (listaTareas[index].estado === false) {
-        listaTareas[index].status = true
+        listaTareas[index].estado = true
     } else {
         listaTareas[index].estado = false
     }
